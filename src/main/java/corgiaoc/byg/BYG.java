@@ -86,6 +86,7 @@ public class BYG {
             BYGBiomes.addBiomeEntries();
             BYGBiomes.fillBiomeDictionary();
         });
+
         LOGGER.info("BYG: \"Common Setup\" Event Complete!");
     }
 
@@ -126,6 +127,7 @@ public class BYG {
             BYG.LOGGER.debug("BYG: Registering blocks...");
             BYGBlocks.init();
             BYGBlocks.blocksList.forEach(block -> event.getRegistry().register(block));
+            BYGBlocks.flowerPotBlocks.forEach(block -> event.getRegistry().register(block));
             BYG.LOGGER.info("BYG: Blocks registered!");
         }
 
